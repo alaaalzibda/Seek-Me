@@ -1,16 +1,16 @@
 const String iconsPath = 'assets/icons/';
 const String videosPath = 'assets/videos/';
 const String gifPath = 'assets/gif/';
+const String imagesPath = 'assets/images/';
 
 // ****** ICONS ******
 
 const String iconArrowRightSmall = '${iconsPath}arrow_right_small.svg';
 // ----------------------------------------
 
-const String imagesPath = 'assets/images/';
 // ****** IMAGES ******
 
-const String imageAlsaqeefaLogo = '${imagesPath}alsaqeefa_logo.png';
+const String imageLogo = '${imagesPath}logo.png';
 
 // ****** VIDEOS ******
 
