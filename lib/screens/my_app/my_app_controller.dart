@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:package_info_plus/package_info_plus.dart';
 
@@ -7,7 +6,6 @@ import '../../general_exports.dart';
 
 class MyAppController extends GetxController {
   dynamic userData;
-  dynamic lovData;
   LocalStorage localStorage = LocalStorage();
   String? versionName;
   String? buildNumber;
