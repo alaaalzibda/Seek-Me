@@ -7,7 +7,7 @@ class SplashController extends GetxController {
     Future.delayed(
       const Duration(seconds: 2),
       (() {
-        consoleLog('on_timer_finished');
+        Get.toNamed(routeOnBoarding);
       }),
     );
   }

@@ -5,4 +5,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeSplash,
     page: () => const Splash(),
   ),
+  GetPage<OnBoarding>(
+    name: routeOnBoarding,
+    page: () => const OnBoarding(),
+  ),
 ];
