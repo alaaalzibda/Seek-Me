@@ -2,9 +2,7 @@ import 'package:seek_me/general_exports.dart';
 
 class OnBoardingController extends GetxController {
   int currentIndex = 0;
-  PageController controller = PageController(
-    initialPage: 0,
-  );
+  PageController controller = PageController();
 
   List<dynamic> introScreens = <dynamic>[
     {
@@ -23,7 +21,6 @@ class OnBoardingController extends GetxController {
 
   void onPageChanged(int value) {
     currentIndex = value;
-
     update();
   }
 

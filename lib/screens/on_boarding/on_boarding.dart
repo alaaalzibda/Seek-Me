@@ -39,18 +39,14 @@ class _OnBoardingState extends State<OnBoarding> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Wrap(
-                              children: [
-                                Text(
-                                  "${controller.introScreens[controller.currentIndex][keyTitle]}",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: fontH1(),
-                                    color: Colors.deepPurpleAccent,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                )
-                              ],
+                            Text(
+                              "${controller.introScreens[controller.currentIndex][keyTitle]}",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: fontH1(),
+                                color: Colors.deepPurpleAccent,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ],
                         ),
@@ -60,19 +56,19 @@ class _OnBoardingState extends State<OnBoarding> {
                 ),
                 Positioned(
                   top: DEVICE_HEIGHT * 0.1,
-                  right: DEVICE_WIDTH * 0,
+                  right: 0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
                         padding: EdgeInsets.only(
-                            right: DEVICE_WIDTH * 0.1,
-                            left: DEVICE_WIDTH * 0.2),
+                          right: DEVICE_WIDTH * 0.1,
+                          left: DEVICE_WIDTH * 0.2,
+                        ),
                         child: Visibility(
                           visible: controller.currentIndex <
                               controller.introScreens.length - 1,
                           child: InkWell(
-                            // onTap: controller.onTap,
                             child: Text(
                               'Skip'.tr,
                               style: const TextStyle(color: Colors.white),
@@ -98,11 +94,12 @@ class _OnBoardingState extends State<OnBoarding> {
                               : DEVICE_WIDTH * 0.02,
                           margin: EdgeInsets.only(right: DEVICE_WIDTH * 0.02),
                           decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.circular(DEVICE_WIDTH * 0.02),
-                              color: controller.currentIndex == index
-                                  ? Colors.deepPurpleAccent
-                                  : Colors.grey),
+                            borderRadius:
+                                BorderRadius.circular(DEVICE_WIDTH * 0.02),
+                            color: controller.currentIndex == index
+                                ? Colors.deepPurpleAccent
+                                : Colors.grey,
+                          ),
                         ),
                       ),
                     ),
@@ -119,23 +116,26 @@ class _OnBoardingState extends State<OnBoarding> {
                         child: Padding(
                           padding: EdgeInsets.all(DEVICE_WIDTH * 0.01),
                           child: ElevatedButton(
-                              onPressed: controller.onPressed,
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Colors.deepPurpleAccent),
-                                shape: MaterialStateProperty.all(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(
-                                        DEVICE_WIDTH * 0.05),
+                            onPressed: controller.onPressed,
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  Colors.deepPurpleAccent),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    DEVICE_WIDTH * 0.05,
                                   ),
                                 ),
                               ),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: DEVICE_WIDTH * 0.05),
-                                child:
-                                    const Icon(Icons.arrow_forward_ios_rounded),
-                              )),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                vertical: DEVICE_WIDTH * 0.05,
+                              ),
+                              child:
+                                  const Icon(Icons.arrow_forward_ios_rounded),
+                            ),
+                          ),
                         ),
                       ),
                     ),
