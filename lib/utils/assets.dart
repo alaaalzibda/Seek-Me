@@ -11,6 +11,9 @@ const String iconArrowRightSmall = '${iconsPath}arrow_right_small.svg';
 // ****** IMAGES ******
 
 const String imageLogo = '${imagesPath}logo.png';
+const String imageIntroOne = '${imagesPath}intro_one.png';
+const String imageIntroTwo = '${imagesPath}intro_two.png';
+const String imageIntroThree = '${imagesPath}intro_three.png';
 
 // ****** VIDEOS ******
 

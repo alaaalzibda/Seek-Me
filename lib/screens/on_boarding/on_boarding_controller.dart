@@ -34,11 +34,11 @@ class OnBoardingController extends GetxController {
   // }
 
   void onPressed() {
-    //print(currentIndex);
-
     controller.nextPage(
         duration: const Duration(milliseconds: 500), curve: Curves.linear);
-
+    if (currentIndex == introScreens.length - 1) {
+      Get.toNamed(routeRegister);
+    }
     update();
   }
 }

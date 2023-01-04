@@ -34,7 +34,7 @@ class _OnBoardingState extends State<OnBoarding> {
                         ),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 180),
+                        padding: const EdgeInsets.only(top: 220),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -100,7 +100,7 @@ class _OnBoardingState extends State<OnBoarding> {
                       ),
                     ),
                     const SizedBox(
-                      height: 55,
+                      height: 30,
                     ),
                     ElevatedButton(
                         onPressed: controller.onPressed,
@@ -118,7 +118,7 @@ class _OnBoardingState extends State<OnBoarding> {
                           child: Icon(Icons.arrow_forward_ios_rounded),
                         )),
                     const SizedBox(
-                      height: 90,
+                      height: 80,
                     )
                   ],
                 ),
