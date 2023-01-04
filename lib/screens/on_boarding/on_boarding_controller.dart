@@ -37,7 +37,7 @@ class OnBoardingController extends GetxController {
     controller.nextPage(
         duration: const Duration(milliseconds: 500), curve: Curves.linear);
     if (currentIndex == introScreens.length - 1) {
-      Get.toNamed(routeRegister);
+      //Get.toNamed(routeRegister);
     }
     update();
   }

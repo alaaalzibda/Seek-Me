@@ -1,3 +1,4 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:seek_me/general_exports.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -34,7 +35,7 @@ class _OnBoardingState extends State<OnBoarding> {
                         ),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 220),
+                        padding: EdgeInsets.only(top: DEVICE_HEIGHT * 0.3),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -58,13 +59,15 @@ class _OnBoardingState extends State<OnBoarding> {
                   }),
                 ),
                 Positioned(
-                  top: 90,
-                  right: 15,
+                  top: DEVICE_HEIGHT * 0.1,
+                  right: DEVICE_WIDTH * 0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(right: 30, left: 10),
+                        padding: EdgeInsets.only(
+                            right: DEVICE_WIDTH * 0.1,
+                            left: DEVICE_WIDTH * 0.2),
                         child: Visibility(
                           visible: controller.currentIndex <
                               controller.introScreens.length - 1,
@@ -89,36 +92,55 @@ class _OnBoardingState extends State<OnBoarding> {
                         controller.introScreens.length,
                         (index) => AnimatedContainer(
                           duration: const Duration(milliseconds: 400),
-                          height: 5,
-                          width: controller.currentIndex == index ? 25 : 10,
-                          margin: const EdgeInsets.only(right: 5),
+                          height: DEVICE_HEIGHT * 0.01,
+                          width: controller.currentIndex == index
+                              ? DEVICE_WIDTH * 0.07
+                              : DEVICE_WIDTH * 0.02,
+                          margin: EdgeInsets.only(right: DEVICE_WIDTH * 0.02),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.deepPurpleAccent,
-                          ),
+                              borderRadius:
+                                  BorderRadius.circular(DEVICE_WIDTH * 0.02),
+                              color: controller.currentIndex == index
+                                  ? Colors.deepPurpleAccent
+                                  : Colors.grey),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.04,
                     ),
-                    ElevatedButton(
-                        onPressed: controller.onPressed,
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              Colors.deepPurpleAccent),
-                          shape: MaterialStateProperty.all(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                          ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(DEVICE_WIDTH * 0.06),
+                      child: DottedBorder(
+                        dashPattern: const [30, 8],
+                        strokeWidth: DEVICE_WIDTH * 0.01,
+                        color: Colors.grey.withOpacity(0.7),
+                        radius: Radius.circular(DEVICE_WIDTH * 3),
+                        child: Padding(
+                          padding: EdgeInsets.all(DEVICE_WIDTH * 0.01),
+                          child: ElevatedButton(
+                              onPressed: controller.onPressed,
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Colors.deepPurpleAccent),
+                                shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                        DEVICE_WIDTH * 0.05),
+                                  ),
+                                ),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: DEVICE_WIDTH * 0.05),
+                                child:
+                                    const Icon(Icons.arrow_forward_ios_rounded),
+                              )),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 20),
-                          child: Icon(Icons.arrow_forward_ios_rounded),
-                        )),
-                    const SizedBox(
-                      height: 80,
+                      ),
+                    ),
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.06,
                     )
                   ],
                 ),
