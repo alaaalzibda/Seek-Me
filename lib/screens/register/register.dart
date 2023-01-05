@@ -34,6 +34,9 @@ class Register extends StatelessWidget {
                       child: Column(
                         children: [
                           IntlPhoneField(
+                            controller: controller.mobileNumberCtrl,
+                            onCountryChanged: controller.onCountryChanged,
+                            onChanged: controller.onChanged,
                             decoration: InputDecoration(
                               hintText: 'Mobile_Number'.tr,
                               border: OutlineInputBorder(
