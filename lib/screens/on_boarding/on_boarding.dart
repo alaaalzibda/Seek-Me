@@ -69,6 +69,7 @@ class _OnBoardingState extends State<OnBoarding> {
                           visible: controller.currentIndex <
                               controller.introScreens.length - 1,
                           child: InkWell(
+                            onTap: controller.onTap,
                             child: Text(
                               'Skip'.tr,
                               style: const TextStyle(color: Colors.white),
