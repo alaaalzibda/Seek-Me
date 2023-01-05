@@ -44,6 +44,7 @@ dependencies:
   fluttertoast: ^8.1.2
   common_ui_toolkit: ^0.3.9
   dotted_border: ^2.0.0+3
+  intl_phone_field: ^3.1.0
 
 dev_dependencies:
   flutter_test:
