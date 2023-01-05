@@ -1,4 +1,5 @@
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:seek_me/components/index.dart';
 import 'package:seek_me/general_exports.dart';
 
 class Register extends StatelessWidget {
@@ -71,39 +72,10 @@ class Register extends StatelessWidget {
                         SizedBox(
                           height: DEVICE_HEIGHT * 0.02,
                         ),
-                        ElevatedButton(
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.circular(DEVICE_WIDTH * 0.04),
-                              ),
-                            ),
-                            backgroundColor: controller.isButtonEnabled
-                                ? MaterialStateProperty.all(
-                                    Colors.deepPurpleAccent)
-                                : MaterialStateProperty.all(Colors.grey),
-                            padding: MaterialStateProperty.all(
-                              EdgeInsets.symmetric(
-                                horizontal: DEVICE_WIDTH * 0.01,
-                                vertical: DEVICE_HEIGHT * 0.02,
-                              ),
-                            ),
-                            textStyle: MaterialStateProperty.all(
-                              const TextStyle(fontSize: 30),
-                            ),
-                          ),
-                          onPressed: controller.isButtonEnabled ? () {} : null,
-                          child: Center(
-                            child: Text(
-                              'login_Sign_up'.tr,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: DEVICE_WIDTH * 0.05,
-                              ),
-                            ),
-                          ),
+                        ElevatedButtondiv(
+                          title: 'login_Sign_up'.tr,
+                          color: Colors.deepPurpleAccent,
+                          isButtonEnabled: controller.isButtonEnabled,
                         ),
                       ],
                     ),
@@ -144,80 +116,16 @@ class Register extends StatelessWidget {
                     SizedBox(
                       height: DEVICE_HEIGHT * 0.01,
                     ),
-                    Container(
-                      width: DEVICE_HEIGHT,
-                      padding: EdgeInsets.symmetric(
-                        horizontal: DEVICE_WIDTH * 0.01,
-                        vertical: DEVICE_HEIGHT * 0.02,
-                      ),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: DEVICE_WIDTH * 0.001,
-                        ),
-                        borderRadius:
-                            BorderRadius.circular(DEVICE_WIDTH * 0.04),
-                      ),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: DEVICE_WIDTH * 0.03),
-                            child: Image.asset(imagegoogle),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: DEVICE_WIDTH * 0.06),
-                            child: Text(
-                              'continue_with_Google'.tr,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: DEVICE_WIDTH * 0.04,
-                                letterSpacing: DEVICE_WIDTH * 0.002,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                    ContainerButton(
+                      image: imagegoogle,
+                      title: 'continue_with_Google'.tr,
                     ),
                     SizedBox(
                       height: DEVICE_HEIGHT * 0.02,
                     ),
-                    Container(
-                      width: DEVICE_HEIGHT,
-                      padding: EdgeInsets.symmetric(
-                        horizontal: DEVICE_WIDTH * 0.01,
-                        vertical: DEVICE_HEIGHT * 0.02,
-                      ),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: DEVICE_WIDTH * 0.001,
-                        ),
-                        borderRadius:
-                            BorderRadius.circular(DEVICE_WIDTH * 0.04),
-                      ),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: DEVICE_WIDTH * 0.03),
-                            child: Image.asset(imagefacebook),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: DEVICE_WIDTH * 0.06),
-                            child: Text(
-                              'continue_with_Facebook'.tr,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: DEVICE_WIDTH * 0.002,
-                                fontSize: DEVICE_WIDTH * 0.04,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                    ContainerButton(
+                      image: imagefacebook,
+                      title: 'continue_with_Facebook'.tr,
                     ),
                   ],
                 ),
