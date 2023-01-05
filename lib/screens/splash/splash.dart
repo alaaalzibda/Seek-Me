@@ -12,9 +12,9 @@ class Splash extends StatelessWidget {
         init: SplashController(),
         builder: (SplashController controller) {
           return Stack(
-            children: const <Widget>[
+            children: <Widget>[
               Center(
-                child: Text('Splash screen'),
+                child: Image.asset(imageLogo),
               ),
             ],
           );

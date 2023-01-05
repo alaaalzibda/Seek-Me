@@ -43,6 +43,7 @@ dependencies:
   package_info_plus: ^3.0.2
   fluttertoast: ^8.1.2
   common_ui_toolkit: ^0.3.9
+  dotted_border: ^2.0.0+3
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,11 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+  - assets/
+  - assets/fonts/
+  - assets/images/
+  - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -82,7 +88,7 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
- fonts:
+  fonts:
     - family: Outfit
       fonts:
         - asset: assets/fonts/Outfit-Bold.ttf

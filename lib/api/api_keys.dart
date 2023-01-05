@@ -5,3 +5,5 @@ String baseUrl = 'http://dawam.sa/ords/tafaseel';
 const String success = 'success';
 const String code = 'code';
 const String message = 'message';
+const String keyImage = 'image';
+const String keyTitle = 'title';
