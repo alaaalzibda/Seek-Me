@@ -3,24 +3,18 @@ import 'package:seek_me/general_exports.dart';
 
 class RegisterController extends GetxController {
   final TextEditingController mobileNumberCtrl = TextEditingController();
-  final GlobalKey<FormState> formKey = GlobalKey();
   int countryMaxlength = 10;
-  bool isValid = false;
-  void onPressed() {
-    isValid = formKey.currentState!.validate();
-    update();
-  }
+  bool isButtonEnabled = false;
 
   void onCountryChanged(Country selectedCountry) {
-    mobileNumberCtrl.text = " ";
     countryMaxlength = selectedCountry.maxLength;
+    mobileNumberCtrl.text = "";
+    isButtonEnabled = false;
     update();
   }
 
   void onChanged(phone) {
-    if (phone.number.length < countryMaxlength) {
-      isValid = false;
-    }
+    isButtonEnabled = phone.number.length == countryMaxlength;
     update();
   }
 }

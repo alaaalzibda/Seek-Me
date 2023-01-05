@@ -29,88 +29,83 @@ class Register extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Form(
-                      key: controller.formKey,
-                      child: Column(
-                        children: [
-                          IntlPhoneField(
-                            controller: controller.mobileNumberCtrl,
-                            onCountryChanged: controller.onCountryChanged,
-                            onChanged: controller.onChanged,
-                            decoration: InputDecoration(
-                              hintText: 'Mobile_Number'.tr,
-                              border: OutlineInputBorder(
+                    Column(
+                      children: [
+                        IntlPhoneField(
+                          controller: controller.mobileNumberCtrl,
+                          onCountryChanged: controller.onCountryChanged,
+                          onChanged: controller.onChanged,
+                          decoration: InputDecoration(
+                            hintText: 'mobile_Number'.tr,
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.circular(DEVICE_WIDTH * 0.04),
+                              borderSide: const BorderSide(color: Colors.grey),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: DEVICE_HEIGHT * 0.01,
+                        ),
+                        TextField(
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                            hintText: 'referral_code'.tr,
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.circular(DEVICE_WIDTH * 0.04),
+                              borderSide: const BorderSide(color: Colors.grey),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: DEVICE_HEIGHT * 0.02,
+                        ),
+                        Text(
+                          'hint_message'.tr,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: DEVICE_WIDTH * 0.03,
+                          ),
+                        ),
+                        SizedBox(
+                          height: DEVICE_HEIGHT * 0.02,
+                        ),
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.circular(DEVICE_WIDTH * 0.04),
-                                borderSide:
-                                    const BorderSide(color: Colors.grey),
+                              ),
+                            ),
+                            backgroundColor: controller.isButtonEnabled
+                                ? MaterialStateProperty.all(
+                                    Colors.deepPurpleAccent)
+                                : MaterialStateProperty.all(Colors.grey),
+                            padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                horizontal: DEVICE_WIDTH * 0.01,
+                                vertical: DEVICE_HEIGHT * 0.02,
+                              ),
+                            ),
+                            textStyle: MaterialStateProperty.all(
+                              const TextStyle(fontSize: 30),
+                            ),
+                          ),
+                          onPressed: controller.isButtonEnabled ? () {} : null,
+                          child: Center(
+                            child: Text(
+                              'login_Sign_up'.tr,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: DEVICE_WIDTH * 0.05,
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: DEVICE_HEIGHT * 0.01,
-                          ),
-                          TextField(
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              hintText: 'Referral_code'.tr,
-                              border: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.circular(DEVICE_WIDTH * 0.04),
-                                borderSide:
-                                    const BorderSide(color: Colors.grey),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: DEVICE_HEIGHT * 0.02,
-                          ),
-                          Text(
-                            'hint_message'.tr,
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: DEVICE_WIDTH * 0.03,
-                            ),
-                          ),
-                          SizedBox(
-                            height: DEVICE_HEIGHT * 0.02,
-                          ),
-                          ElevatedButton(
-                            style: ButtonStyle(
-                              shape: MaterialStateProperty.all<
-                                  RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      DEVICE_WIDTH * 0.04),
-                                ),
-                              ),
-                              backgroundColor: controller.isValid
-                                  ? MaterialStateProperty.all(
-                                      Colors.deepPurpleAccent)
-                                  : MaterialStateProperty.all(Colors.grey),
-                              padding: MaterialStateProperty.all(
-                                EdgeInsets.symmetric(
-                                  horizontal: DEVICE_WIDTH * 0.01,
-                                  vertical: DEVICE_HEIGHT * 0.02,
-                                ),
-                              ),
-                              textStyle: MaterialStateProperty.all(
-                                const TextStyle(fontSize: 30),
-                              ),
-                            ),
-                            onPressed: controller.onPressed,
-                            child: Center(
-                              child: Text(
-                                'Login_Sign up'.tr,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: DEVICE_WIDTH * 0.05,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: DEVICE_HEIGHT * 0.02,
@@ -173,7 +168,7 @@ class Register extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(left: DEVICE_WIDTH * 0.06),
                             child: Text(
-                              'Continue_with_Google'.tr,
+                              'continue_with_Google'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: DEVICE_WIDTH * 0.04,
@@ -212,7 +207,7 @@ class Register extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(left: DEVICE_WIDTH * 0.06),
                             child: Text(
-                              'Continue_with_Facebook'.tr,
+                              'continue_with_Facebook'.tr,
                               style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
