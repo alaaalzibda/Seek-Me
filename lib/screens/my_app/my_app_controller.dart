@@ -6,6 +6,7 @@ import '../../general_exports.dart';
 
 class MyAppController extends GetxController {
   dynamic userData;
+  bool isFirstRun = true;
   LocalStorage localStorage = LocalStorage();
   String? versionName;
   String? buildNumber;
@@ -14,6 +15,8 @@ class MyAppController extends GetxController {
   Future<void> onInit() async {
     super.onInit();
     userData = await localStorage.getFromStorage(key: storeUser);
+    isFirstRun =
+        await localStorage.getFromStorage(key: storeIsFirstRun) ?? true;
     consoleLog(userData, key: 'userData');
   }
 
@@ -36,11 +39,10 @@ class MyAppController extends GetxController {
     update();
   }
 
-  void onUserUpdated(dynamic userDataValue) {
-    localStorage.saveToStorage(key: storeUser, value: userDataValue);
-    userData = userDataValue;
-    consoleLog(userDataValue);
-    update();
+  void onFirstRunUpdated() {
+    localStorage.saveToStorage(key: storeIsFirstRun, value: false);
+    isFirstRun = false;
+    consoleLog('onFirstRunUpdated$isFirstRun');
   }
 
   void onSignOut() {
