@@ -1,4 +1,4 @@
-import 'package:seek_me/general_exports.dart';
+import '../../general_exports.dart';
 
 class OnBoardingController extends GetxController {
   int currentIndex = 0;

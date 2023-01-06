@@ -1,6 +1,7 @@
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:seek_me/components/index.dart';
-import 'package:seek_me/general_exports.dart';
+
+import '../../components/index.dart';
+import '../../general_exports.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
@@ -73,6 +74,7 @@ class Register extends StatelessWidget {
                           height: DEVICE_HEIGHT * 0.02,
                         ),
                         ElevatedButtonDiv(
+                          onPress: controller.onPress,
                           title: 'login_Sign_up'.tr,
                           color: Colors.deepPurpleAccent,
                           isButtonEnabled: controller.isButtonEnabled,

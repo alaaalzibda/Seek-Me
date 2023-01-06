@@ -1,6 +1,7 @@
 import 'package:intl_phone_field/countries.dart';
 import 'package:intl_phone_field/phone_number.dart';
-import 'package:seek_me/general_exports.dart';
+
+import '../../general_exports.dart';
 
 class RegisterController extends GetxController {
   final TextEditingController mobileNumberCtrl = TextEditingController();
@@ -9,13 +10,20 @@ class RegisterController extends GetxController {
 
   void onCountryChanged(Country selectedCountry) {
     countryMaxlength = selectedCountry.maxLength;
-    mobileNumberCtrl.text = "";
+    mobileNumberCtrl.text = '';
     isButtonEnabled = false;
     update();
   }
 
   void onChanged(PhoneNumber phone) {
     isButtonEnabled = phone.number.length == countryMaxlength;
+    update();
+  }
+
+  void onPress() {
+    if (isButtonEnabled) {
+      Get.toNamed(routeOTP);
+    }
     update();
   }
 }
