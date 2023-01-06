@@ -9,4 +9,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeOnBoarding,
     page: () => const OnBoarding(),
   ),
+  GetPage<Register>(
+    name: routeRegister,
+    page: () => const Register(),
+  ),
 ];

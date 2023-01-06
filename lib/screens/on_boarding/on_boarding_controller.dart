@@ -24,17 +24,16 @@ class OnBoardingController extends GetxController {
     update();
   }
 
-  // void onTap() {
-  //   controller.nextPage(
-  //       duration: const Duration(milliseconds: 500), curve: Curves.linear);
-  //   update();
-  // }
+  void onTap() {
+    Get.toNamed(routeRegister);
+    update();
+  }
 
   void onPressed() {
     controller.nextPage(
         duration: const Duration(milliseconds: 500), curve: Curves.linear);
     if (currentIndex == introScreens.length - 1) {
-      //Get.toNamed(routeRegister);
+      Get.toNamed(routeRegister);
     }
     update();
   }
