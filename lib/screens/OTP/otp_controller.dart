@@ -21,12 +21,12 @@ class OtpController extends GetxController {
 
   void OnChanged(String value) {
     if (value.length == 1) {
-      isButtonEnabeld = true;
       pin4FocusNode!.unfocus();
     }
     if (digitOne.text.isNotEmpty &&
         digitTwo.text.isNotEmpty &&
-        digitThree.text.isNotEmpty) {
+        digitThree.text.isNotEmpty &&
+        digitFour.text.isNotEmpty) {
       isButtonEnabeld = true;
     }
     if (value.isEmpty) {
