@@ -17,7 +17,7 @@ class Register extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.06),
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     SizedBox(
                       height: DEVICE_HEIGHT * 0.1,
                     ),
@@ -32,7 +32,7 @@ class Register extends StatelessWidget {
                       ),
                     ),
                     Column(
-                      children: [
+                      children: <Widget>[
                         IntlPhoneField(
                           controller: controller.mobileNumberCtrl,
                           onCountryChanged: controller.onCountryChanged,
@@ -85,7 +85,7 @@ class Register extends StatelessWidget {
                       height: DEVICE_HEIGHT * 0.02,
                     ),
                     Row(
-                      children: [
+                      children: <Widget>[
                         SizedBox(
                           width: DEVICE_WIDTH * 0.4,
                           child: Divider(

@@ -12,5 +12,7 @@ const Map<String, String> en = <String, String>{
   'login_Sign_up': 'Login/Sign up',
   'or': 'or',
   'continue_with_Google': 'Continue with Google',
-  'continue_with_Facebook': 'Continue with Facebook'
+  'continue_with_Facebook': 'Continue with Facebook',
+  'verification_code': 'Enter verification code',
+  'verification_message': 'We have sent you a 4 digit verification code on',
 };

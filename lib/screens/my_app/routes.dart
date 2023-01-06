@@ -13,4 +13,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeRegister,
     page: () => const Register(),
   ),
+  GetPage<OtpForm>(
+    name: routeOTP,
+    page: () => const OtpForm(),
+  ),
 ];
