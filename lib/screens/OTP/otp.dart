@@ -1,8 +1,13 @@
-import '../../components/index.dart';
 import '../../general_exports.dart';
 
-class OtpForm extends StatelessWidget {
+class OtpForm extends StatefulWidget {
   const OtpForm({super.key});
+
+  @override
+  State<OtpForm> createState() => _OtpFormState();
+}
+
+class _OtpFormState extends State<OtpForm> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -53,26 +58,164 @@ class OtpForm extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        OtpTextField(
-                          digitcontroller: controller.digitOne,
+                        SizedBox(
+                          height: DEVICE_HEIGHT * 0.07,
+                          width: DEVICE_WIDTH * 0.13,
+                          child: TextField(
+                            controller: controller.digitOne,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center,
+                            autofocus: true,
+                            showCursor: false,
+                            maxLength: 1,
+                            decoration: InputDecoration(
+                              counter: const Offstage(),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.deepPurple[200]!,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Colors.deepPurple,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                            ),
+                            onChanged: (String value) {
+                              controller.nextField(
+                                value,
+                                controller.pin2FocusNode,
+                              );
+                            },
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: DEVICE_WIDTH * 0.06,
+                            ),
+                            keyboardType: TextInputType.number,
+                          ),
                         ),
                         SizedBox(
-                          width: DEVICE_WIDTH * 0.01,
-                        ),
-                        OtpTextField(
-                          digitcontroller: controller.digitTwo,
+                          width: DEVICE_WIDTH * 0.04,
                         ),
                         SizedBox(
-                          width: DEVICE_WIDTH * 0.01,
-                        ),
-                        OtpTextField(
-                          digitcontroller: controller.digitThree,
+                          height: DEVICE_HEIGHT * 0.07,
+                          width: DEVICE_WIDTH * 0.13,
+                          child: TextField(
+                            controller: controller.digitTwo,
+                            focusNode: controller.pin2FocusNode,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center,
+                            autofocus: true,
+                            showCursor: false,
+                            maxLength: 1,
+                            decoration: InputDecoration(
+                              counter: const Offstage(),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.deepPurple[200]!,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Colors.deepPurple,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                            ),
+                            onChanged: (String value) {
+                              controller.nextField(
+                                value,
+                                controller.pin3FocusNode,
+                              );
+                            },
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: DEVICE_WIDTH * 0.06,
+                            ),
+                            keyboardType: TextInputType.number,
+                          ),
                         ),
                         SizedBox(
-                          width: DEVICE_WIDTH * 0.01,
+                          width: DEVICE_WIDTH * 0.04,
                         ),
-                        OtpTextField(
-                          digitcontroller: controller.digitFour,
+                        SizedBox(
+                          height: DEVICE_HEIGHT * 0.07,
+                          width: DEVICE_WIDTH * 0.13,
+                          child: TextField(
+                            controller: controller.digitThree,
+                            focusNode: controller.pin3FocusNode,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center,
+                            autofocus: true,
+                            showCursor: false,
+                            maxLength: 1,
+                            decoration: InputDecoration(
+                              counter: const Offstage(),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.deepPurple[200]!,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Colors.deepPurple,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                            ),
+                            onChanged: (String value) {
+                              controller.nextField(
+                                value,
+                                controller.pin4FocusNode,
+                              );
+                            },
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: DEVICE_WIDTH * 0.06,
+                            ),
+                            keyboardType: TextInputType.number,
+                          ),
+                        ),
+                        SizedBox(
+                          width: DEVICE_WIDTH * 0.04,
+                        ),
+                        SizedBox(
+                          height: DEVICE_HEIGHT * 0.07,
+                          width: DEVICE_WIDTH * 0.13,
+                          child: TextField(
+                            controller: controller.digitFour,
+                            focusNode: controller.pin4FocusNode,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center,
+                            autofocus: true,
+                            showCursor: false,
+                            maxLength: 1,
+                            decoration: InputDecoration(
+                              counter: const Offstage(),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.deepPurple[200]!,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Colors.deepPurple,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                            ),
+                            onChanged: controller.OnChanged,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: DEVICE_WIDTH * 0.06,
+                            ),
+                            keyboardType: TextInputType.number,
+                          ),
                         ),
                       ],
                     ),
