@@ -1,15 +1,16 @@
 import 'package:seek_me/general_exports.dart';
 
-class ElevatedButtondiv extends StatelessWidget {
+class ElevatedButtonDiv extends StatelessWidget {
   late String title;
   Color color = Colors.deepPurpleAccent;
   late bool isButtonEnabled;
 
-  ElevatedButtondiv(
-      {super.key,
-      required this.title,
-      required this.color,
-      required this.isButtonEnabled});
+  ElevatedButtonDiv({
+    super.key,
+    required this.title,
+    required this.color,
+    required this.isButtonEnabled,
+  });
 
   @override
   Widget build(BuildContext context) {

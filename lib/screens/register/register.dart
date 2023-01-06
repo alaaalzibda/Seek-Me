@@ -72,7 +72,7 @@ class Register extends StatelessWidget {
                         SizedBox(
                           height: DEVICE_HEIGHT * 0.02,
                         ),
-                        ElevatedButtondiv(
+                        ElevatedButtonDiv(
                           title: 'login_Sign_up'.tr,
                           color: Colors.deepPurpleAccent,
                           isButtonEnabled: controller.isButtonEnabled,
@@ -117,6 +117,7 @@ class Register extends StatelessWidget {
                       height: DEVICE_HEIGHT * 0.01,
                     ),
                     ContainerButton(
+                      onPress: () {},
                       image: imagegoogle,
                       title: 'continue_with_Google'.tr,
                     ),
@@ -124,6 +125,7 @@ class Register extends StatelessWidget {
                       height: DEVICE_HEIGHT * 0.02,
                     ),
                     ContainerButton(
+                      onPress: () {},
                       image: imagefacebook,
                       title: 'continue_with_Facebook'.tr,
                     ),

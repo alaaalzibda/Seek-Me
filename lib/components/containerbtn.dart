@@ -3,13 +3,19 @@ import '../general_exports.dart';
 class ContainerButton extends StatelessWidget {
   String image;
   String title;
+  Function() onPress;
 
-  ContainerButton({super.key, required this.image, required this.title});
+  ContainerButton({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.onPress,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onPress,
       child: Container(
         width: DEVICE_HEIGHT,
         padding: EdgeInsets.symmetric(

@@ -1,4 +1,5 @@
 import 'package:intl_phone_field/countries.dart';
+import 'package:intl_phone_field/phone_number.dart';
 import 'package:seek_me/general_exports.dart';
 
 class RegisterController extends GetxController {
@@ -13,7 +14,7 @@ class RegisterController extends GetxController {
     update();
   }
 
-  void onChanged(phone) {
+  void onChanged(PhoneNumber phone) {
     isButtonEnabled = phone.number.length == countryMaxlength;
     update();
   }
