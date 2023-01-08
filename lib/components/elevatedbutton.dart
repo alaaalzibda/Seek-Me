@@ -1,16 +1,18 @@
-import 'package:seek_me/general_exports.dart';
+import '../general_exports.dart';
 
+// ignore: must_be_immutable
 class ElevatedButtonDiv extends StatelessWidget {
-  late String title;
-  Color color = Colors.deepPurpleAccent;
-  late bool isButtonEnabled;
-
   ElevatedButtonDiv({
-    super.key,
     required this.title,
     required this.color,
     required this.isButtonEnabled,
+    required this.onPress,
+    super.key,
   });
+  final String title;
+  Color color = Colors.deepPurpleAccent;
+  final bool isButtonEnabled;
+  final Function() onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class ElevatedButtonDiv extends StatelessWidget {
           const TextStyle(fontSize: 30),
         ),
       ),
-      onPressed: isButtonEnabled ? () {} : null,
+      onPressed: isButtonEnabled ? onPress : null,
       child: Center(
         child: Text(
           title,

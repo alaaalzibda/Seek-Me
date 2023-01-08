@@ -1,5 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
-import 'package:seek_me/general_exports.dart';
+
+import '../../general_exports.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
@@ -17,20 +18,19 @@ class _OnBoardingState extends State<OnBoarding> {
           init: OnBoardingController(),
           builder: (OnBoardingController controller) {
             return Stack(
-              children: [
+              children: <Widget>[
                 PageView.builder(
                   controller: controller.controller,
-                  scrollDirection: Axis.horizontal,
                   onPageChanged: controller.onPageChanged,
                   itemCount: controller.introScreens.length,
-                  itemBuilder: ((context, index) {
+                  itemBuilder: ((BuildContext context, int index) {
                     return AnimatedContainer(
                       duration: const Duration(milliseconds: 300),
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage(
-                            "${controller.introScreens[index][keyImage]}",
+                            '${controller.introScreens[index][keyImage]}',
                           ),
                         ),
                       ),
@@ -38,9 +38,9 @@ class _OnBoardingState extends State<OnBoarding> {
                         padding: EdgeInsets.only(top: DEVICE_HEIGHT * 0.3),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: <Widget>[
                             Text(
-                              "${controller.introScreens[controller.currentIndex][keyTitle]}",
+                              '${controller.introScreens[controller.currentIndex][keyTitle]}',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: fontH1(),
@@ -59,7 +59,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   right: 0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
+                    children: <Widget>[
                       Padding(
                         padding: EdgeInsets.only(
                           right: DEVICE_WIDTH * 0.1,
@@ -82,12 +82,12 @@ class _OnBoardingState extends State<OnBoarding> {
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
+                  children: <Widget>[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
+                      children: List<Widget>.generate(
                         controller.introScreens.length,
-                        (index) => AnimatedContainer(
+                        (int index) => AnimatedContainer(
                           duration: const Duration(milliseconds: 400),
                           height: DEVICE_HEIGHT * 0.01,
                           width: controller.currentIndex == index
@@ -110,7 +110,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(DEVICE_WIDTH * 0.06),
                       child: DottedBorder(
-                        dashPattern: const [30, 8],
+                        dashPattern: const <double>[30, 8],
                         strokeWidth: DEVICE_WIDTH * 0.01,
                         color: Colors.grey.withOpacity(0.7),
                         radius: Radius.circular(DEVICE_WIDTH * 3),

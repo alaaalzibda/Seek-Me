@@ -1,6 +1,7 @@
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:seek_me/components/index.dart';
-import 'package:seek_me/general_exports.dart';
+
+import '../../components/index.dart';
+import '../../general_exports.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
@@ -16,7 +17,7 @@ class Register extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.06),
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     SizedBox(
                       height: DEVICE_HEIGHT * 0.1,
                     ),
@@ -31,7 +32,7 @@ class Register extends StatelessWidget {
                       ),
                     ),
                     Column(
-                      children: [
+                      children: <Widget>[
                         IntlPhoneField(
                           controller: controller.mobileNumberCtrl,
                           onCountryChanged: controller.onCountryChanged,
@@ -73,6 +74,7 @@ class Register extends StatelessWidget {
                           height: DEVICE_HEIGHT * 0.02,
                         ),
                         ElevatedButtonDiv(
+                          onPress: controller.onPress,
                           title: 'login_Sign_up'.tr,
                           color: Colors.deepPurpleAccent,
                           isButtonEnabled: controller.isButtonEnabled,
@@ -83,7 +85,7 @@ class Register extends StatelessWidget {
                       height: DEVICE_HEIGHT * 0.02,
                     ),
                     Row(
-                      children: [
+                      children: <Widget>[
                         SizedBox(
                           width: DEVICE_WIDTH * 0.4,
                           child: Divider(

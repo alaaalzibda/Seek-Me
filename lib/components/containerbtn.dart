@@ -1,16 +1,15 @@
 import '../general_exports.dart';
 
 class ContainerButton extends StatelessWidget {
-  String image;
-  String title;
-  Function() onPress;
-
-  ContainerButton({
-    super.key,
+  const ContainerButton({
     required this.image,
     required this.title,
     required this.onPress,
+    super.key,
   });
+  final String image;
+  final String title;
+  final Function() onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +29,7 @@ class ContainerButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(DEVICE_WIDTH * 0.04),
         ),
         child: Row(
-          children: [
+          children: <Widget>[
             Padding(
               padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.03),
               child: Image.asset(image),
