@@ -1,4 +1,7 @@
-import '../../components/textfield_otp.dart';
+import 'package:otp_text_field/otp_field.dart';
+import 'package:otp_text_field/otp_field_style.dart';
+import 'package:otp_text_field/style.dart';
+
 import '../../general_exports.dart';
 
 class OtpForm extends StatefulWidget {
@@ -56,52 +59,21 @@ class _OtpFormState extends State<OtpForm> {
                     SizedBox(
                       height: DEVICE_HEIGHT * 0.04,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        TextFieldOtp(
-                          controller: controller.digitOne,
-                          onChanged: (String value) {
-                            controller.nextField(
-                              value,
-                              controller.pin2FocusNode,
-                            );
-                          },
-                        ),
-                        SizedBox(
-                          width: DEVICE_WIDTH * 0.04,
-                        ),
-                        TextFieldOtp(
-                          controller: controller.digitTwo,
-                          focusNode: controller.pin2FocusNode,
-                          onChanged: (String value) {
-                            controller.nextField(
-                              value,
-                              controller.pin3FocusNode,
-                            );
-                          },
-                        ),
-                        SizedBox(
-                          width: DEVICE_WIDTH * 0.04,
-                        ),
-                        TextFieldOtp(
-                          controller: controller.digitThree,
-                          focusNode: controller.pin3FocusNode,
-                          onChanged: (String value) {
-                            controller.nextField(
-                              value,
-                              controller.pin4FocusNode,
-                            );
-                          },
-                        ),
-                        SizedBox(
-                          width: DEVICE_WIDTH * 0.04,
-                        ),
-                        TextFieldOtp(
-                            controller: controller.digitFour,
-                            focusNode: controller.pin4FocusNode,
-                            onChanged: controller.onChanged),
-                      ],
+                    OTPTextField(
+                      otpFieldStyle: OtpFieldStyle(
+                        focusBorderColor: Colors.deepPurpleAccent,
+                        enabledBorderColor: Colors.deepPurple[200]!,
+                      ),
+                      width: DEVICE_WIDTH * 0.7,
+                      textFieldAlignment: MainAxisAlignment.spaceEvenly,
+                      fieldWidth: DEVICE_WIDTH * 0.12,
+                      fieldStyle: FieldStyle.box,
+                      outlineBorderRadius: DEVICE_WIDTH * 0.04,
+                      style: const TextStyle(
+                        fontSize: 17,
+                      ),
+                      onChanged: controller.onChanged,
+                      onCompleted: controller.onCompleted,
                     ),
                     SizedBox(
                       height: DEVICE_HEIGHT * 0.15,
