@@ -7,3 +7,5 @@ const String code = 'code';
 const String message = 'message';
 const String keyImage = 'image';
 const String keyTitle = 'title';
+const String keyColor = 'color';
+const String keyCategory = 'category';

@@ -14,4 +14,8 @@ class OtpController extends GetxController {
     }
     update();
   }
+
+  void onTap() {
+    Get.toNamed(routeHome);
+  }
 }

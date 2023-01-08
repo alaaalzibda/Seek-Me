@@ -17,4 +17,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeOTP,
     page: () => const OtpForm(),
   ),
+  GetPage<NavBar>(
+    name: routeHome,
+    page: () => const NavBar(),
+  ),
 ];
