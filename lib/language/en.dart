@@ -15,4 +15,5 @@ const Map<String, String> en = <String, String>{
   'continue_with_Facebook': 'Continue with Facebook',
   'verification_code': 'Enter verification code',
   'verification_message': 'We have sent you a 4 digit verification code on',
+  'continue': 'Continue',
 };

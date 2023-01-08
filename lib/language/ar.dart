@@ -15,4 +15,5 @@ const Map<String, String> ar = <String, String>{
   'continue_with_Facebook': 'تواصل مع فيسبوك',
   'verification_code': 'أدخل رمز التحقق',
   'verification_message': 'لقد أرسلنا لك رمز تحقق مكونًا من 4 أرقام',
+  'continue': 'استمر',
 };
