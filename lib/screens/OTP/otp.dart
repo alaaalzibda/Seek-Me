@@ -82,7 +82,7 @@ class _OtpFormState extends State<OtpForm> {
                       title: 'continue'.tr,
                       color: Colors.deepPurpleAccent,
                       isButtonEnabled: controller.isButtonEnabeld,
-                      onPress: () {},
+                      onPress: controller.onTap,
                     )
                   ],
                 ),
