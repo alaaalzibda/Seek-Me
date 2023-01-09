@@ -23,34 +23,34 @@ class _BottomNavigationState extends State<BottomNavigation> {
               selectedItemColor: Colors.deepPurpleAccent,
               currentIndex: controller.currentindex,
               onTap: controller.onTap,
-              items: const <BottomNavigationBarItem>[
+              items: <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 6),
-                    child: Icon(Icons.grid_view_rounded),
+                    padding: EdgeInsets.only(bottom: DEVICE_HEIGHT * 0.01),
+                    child: const Icon(Icons.grid_view_rounded),
                   ),
-                  label: 'Home',
+                  label: 'home'.tr,
                 ),
                 BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 6),
-                    child: Icon(Icons.view_timeline_rounded),
+                    padding: EdgeInsets.only(bottom: DEVICE_HEIGHT * 0.01),
+                    child: const Icon(Icons.view_timeline_rounded),
                   ),
-                  label: 'Bookings',
+                  label: 'bookings'.tr,
                 ),
                 BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 6),
-                    child: Icon(Icons.account_balance_wallet_rounded),
+                    padding: EdgeInsets.only(bottom: DEVICE_HEIGHT * 0.01),
+                    child: const Icon(Icons.account_balance_wallet_rounded),
                   ),
-                  label: 'Wallet',
+                  label: 'Wallet'.tr,
                 ),
                 BottomNavigationBarItem(
                   icon: Padding(
-                    padding: EdgeInsets.only(bottom: 6),
-                    child: Icon(Icons.person_rounded),
+                    padding: EdgeInsets.only(bottom: DEVICE_HEIGHT * 0.01),
+                    child: const Icon(Icons.person_rounded),
                   ),
-                  label: 'Profile',
+                  label: 'profile'.tr,
                 ),
               ],
             ),

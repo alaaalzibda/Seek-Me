@@ -27,4 +27,8 @@ const Map<String, String> ar = <String, String>{
   'explore': 'اكتشف',
   'view_profile': 'عرض الصفحة الشخصية',
   'trending_services': 'خدمات رائجة',
+  'home': 'الصفحةالرئيسية',
+  'bookings': 'الحجوزات',
+  'Wallet': 'محفظة نقود',
+  'profile': 'الملف الشخصي',
 };

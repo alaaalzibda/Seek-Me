@@ -28,4 +28,8 @@ const Map<String, String> en = <String, String>{
   'explore': 'explore',
   'view_profile': 'view profile',
   'trending_services': 'Trending Services',
+  'home': 'Home',
+  'bookings': 'Bookings',
+  'Wallet': 'Wallet',
+  'profile': 'Profile',
 };
