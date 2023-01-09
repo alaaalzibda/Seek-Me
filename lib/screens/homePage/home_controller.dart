@@ -3,7 +3,7 @@
 import '../../general_exports.dart';
 
 class HomeController extends GetxController {
-  int current = 1;
+  int currentindex = 1;
   List<dynamic> list = <dynamic>[
     {
       keyImage: imageSliderPerson,
@@ -83,7 +83,7 @@ class HomeController extends GetxController {
   ];
 
   void onPageUpdated(int index, dynamic reason) {
-    current = index;
+    currentindex = index;
     update();
   }
 }

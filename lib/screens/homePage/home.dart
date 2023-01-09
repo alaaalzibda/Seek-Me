@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              'Hi, Harry',
+                              'hi'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: DEVICE_WIDTH * 0.06,
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                                   width: DEVICE_WIDTH * 0.01,
                                 ),
                                 Text(
-                                  'Ayodhya Nagar, Bhopal',
+                                  'location'.tr,
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: DEVICE_WIDTH * 0.03,
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                 child: TextField(
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
-                    hintText: 'Search for services',
+                    hintText: 'search'.tr,
                     prefixIcon: const Icon(Icons.search),
                     prefixIconColor: Colors.grey,
                     border: OutlineInputBorder(
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                                           DEVICE_WIDTH * 0.05),
                                     ),
                                     child: Text(
-                                      'NEW USERS',
+                                      'new_users'.tr,
                                       style: TextStyle(
                                         color: Colors.deepPurple,
                                         fontSize: DEVICE_WIDTH * 0.04,
@@ -163,14 +163,14 @@ class _HomePageState extends State<HomePage> {
                                     children: <Widget>[
                                       RichText(
                                         text: TextSpan(
-                                          text: 'Get Discount upto ',
+                                          text: 'get_message'.tr,
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: DEVICE_WIDTH * 0.06,
                                           ),
                                           children: <TextSpan>[
                                             TextSpan(
-                                              text: '25%',
+                                              text: '25%'.tr,
                                               style: TextStyle(
                                                 fontSize: DEVICE_WIDTH * 0.08,
                                                 fontWeight: FontWeight.bold,
@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                                     ],
                                   ),
                                   Text(
-                                    'For every cleaning services',
+                                    'services'.tr,
                                     style: TextStyle(
                                       fontSize: DEVICE_WIDTH * 0.03,
                                       color: Colors.white,
@@ -214,8 +214,8 @@ class _HomePageState extends State<HomePage> {
                 },
                 carouselController: CarouselController(),
               ),
-              const SizedBox(
-                height: 4,
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.01,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -224,13 +224,13 @@ class _HomePageState extends State<HomePage> {
                   (int index) => AnimatedContainer(
                     duration: const Duration(milliseconds: 400),
                     height: DEVICE_HEIGHT * 0.01,
-                    width: controller.current == index
+                    width: controller.currentindex == index
                         ? DEVICE_WIDTH * 0.07
                         : DEVICE_WIDTH * 0.02,
                     margin: EdgeInsets.only(right: DEVICE_WIDTH * 0.01),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(DEVICE_WIDTH * 0.02),
-                      color: controller.current == index
+                      color: controller.currentindex == index
                           ? Colors.deepPurpleAccent
                           : Colors.grey,
                     ),
@@ -242,7 +242,7 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      'Categories ',
+                      'categories'.tr,
                       style: TextStyle(
                         fontSize: DEVICE_WIDTH * 0.06,
                         fontWeight: FontWeight.bold,
@@ -271,8 +271,8 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
-              const SizedBox(
-                height: 4,
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.01,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.07),
@@ -280,21 +280,21 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      'Top Freelancers',
+                      'top_freelancers'.tr,
                       style: TextStyle(
                         fontSize: DEVICE_WIDTH * 0.06,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Row(
-                      children: const <Widget>[
+                      children: <Widget>[
                         Text(
-                          'explore',
-                          style: TextStyle(
+                          'explore'.tr,
+                          style: const TextStyle(
                             color: Colors.grey,
                           ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.keyboard_double_arrow_right_rounded,
                           color: Colors.grey,
                         )
@@ -422,7 +422,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                                 child: Text(
-                                  'view profile',
+                                  'view_profile'.tr,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: DEVICE_WIDTH * 0.04,
@@ -437,15 +437,15 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
-              const SizedBox(
-                height: 6,
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.02,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.07),
                 child: Row(
                   children: <Widget>[
                     Text(
-                      'Trending Services',
+                      'trending_services'.tr,
                       style: TextStyle(
                         fontSize: DEVICE_WIDTH * 0.06,
                         fontWeight: FontWeight.bold,
