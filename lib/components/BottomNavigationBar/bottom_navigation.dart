@@ -1,5 +1,4 @@
 import '../../general_exports.dart';
-import 'bottomNavigation_controller.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});

@@ -303,29 +303,28 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 2,
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.001,
               ),
               SizedBox(
                 width: DEVICE_WIDTH * 0.9,
-                height: 200,
+                height: DEVICE_HEIGHT * 0.26,
                 child: ListView.builder(
                   itemCount: controller.topFreelance.length,
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
-                      margin: const EdgeInsets.only(top: 40, right: 10),
-                      height: 100,
-                      width: 160,
+                      margin: EdgeInsets.only(
+                        top: DEVICE_HEIGHT * 0.05,
+                        right: DEVICE_HEIGHT * 0.01,
+                      ),
+                      height: DEVICE_HEIGHT * 0.02,
+                      width: DEVICE_HEIGHT * 0.22,
                       decoration: BoxDecoration(
                         color: Colors.grey[100],
-                        borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20),
-                        ),
+                        borderRadius:
+                            BorderRadius.circular(DEVICE_WIDTH * 0.07),
                       ),
                       child: Stack(
                         clipBehavior: Clip.none,
@@ -334,14 +333,15 @@ class _HomePageState extends State<HomePage> {
                             top: -27,
                             right: 50,
                             child: Container(
-                              padding: const EdgeInsets.all(5),
+                              padding: EdgeInsets.all(DEVICE_WIDTH * 0.01),
                               decoration: BoxDecoration(
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
                                     color: Colors.grey[100]!,
                                   ),
                                 ],
-                                borderRadius: BorderRadius.circular(38),
+                                borderRadius:
+                                    BorderRadius.circular(DEVICE_WIDTH * 0.09),
                               ),
                               child: ClipOval(
                                 child: Image.asset(
@@ -354,13 +354,13 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Column(
-                            children: [
+                            children: <Widget>[
                               SizedBox(
                                 height: DEVICE_HEIGHT * 0.06,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
+                                children: <Widget>[
                                   Text(
                                     controller.topFreelance[index][keyName],
                                     style: TextStyle(
@@ -390,7 +390,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
+                                children: <Widget>[
                                   Icon(
                                     Icons.star,
                                     color: Colors.amber,
@@ -471,7 +471,7 @@ class _HomePageState extends State<HomePage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         gradient: LinearGradient(
-                          colors: [
+                          colors: <Color>[
                             Colors.transparent,
                             Colors.black.withOpacity(0.3)
                           ],
