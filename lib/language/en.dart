@@ -17,7 +17,6 @@ const Map<String, String> en = <String, String>{
   'verification_message': 'We have sent you a 4 digit verification code on',
   'continue': 'Continue',
   'hi': 'Hi, Harry',
-  'location': 'Ayodhya Nagar, Bhopal',
   'search': 'Search for services',
   'new_users': 'NEW USERS',
   'get_message': 'Get Discount upto ',
@@ -32,4 +31,11 @@ const Map<String, String> en = <String, String>{
   'bookings': 'Bookings',
   'Wallet': 'Wallet',
   'profile': 'Profile',
+  'Select_location': 'Select a location',
+  'Search_for_area': 'Search for area, street name. . .',
+  'Use_current_location': 'Use current location',
+  'location': 'Ayodhya Nagar Extension, Ayodhya Bypass',
+  'Saved_addresses': 'Saved addresses',
+  'address':
+      '89, Bhel Nagar, Piplani, Ayodhya Bypass, Bhopal, Madhya Pradesh 462022, India '
 };

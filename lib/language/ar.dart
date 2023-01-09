@@ -17,7 +17,6 @@ const Map<String, String> ar = <String, String>{
   'verification_message': 'لقد أرسلنا لك رمز تحقق مكونًا من 4 أرقام',
   'continue': 'استمر',
   'Hi': 'مرحبا هاري',
-  'location': 'أيودهيا ناجار ، بوبال',
   'Search': 'ابحث عن الخدمات',
   'NEW_USERS': 'مستخدمون جدد',
   '25%': '%٢٥',
@@ -31,4 +30,9 @@ const Map<String, String> ar = <String, String>{
   'bookings': 'الحجوزات',
   'Wallet': 'محفظة نقود',
   'profile': 'الملف الشخصي',
+  'Select_location': 'اختر موقعا',
+  'Search_for_area': 'ابحث عن المنطقة واسم الشارع. . .',
+  'Use_current_location': 'استخدام الموقع الحالي',
+  'location': 'امتداد أيوديا ناجار ، أيوديا بايباس',
+  'Saved_addresses': 'العناوين المحفوظة',
 };

@@ -4,6 +4,7 @@ import '../../general_exports.dart';
 
 class HomeController extends GetxController {
   int currentindex = 1;
+  String location = 'Ayodhya Nagar, Bhopal';
   List<dynamic> list = <dynamic>[
     {
       keyImage: imageSliderPerson,
