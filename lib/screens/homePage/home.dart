@@ -3,76 +3,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import '../../components/gridview.dart';
 import '../../general_exports.dart';
 
-class NavBar extends StatefulWidget {
-  const NavBar({super.key});
-
-  @override
-  State<NavBar> createState() => _NavBarState();
-}
-
-class _NavBarState extends State<NavBar> {
-  int currentindex = 0;
-  List<Widget> pages = <Widget>[
-    const HomePage(),
-    const Center(child: Text('Bookings Page')),
-    const Center(child: Text('Wallet Page')),
-    const Center(child: Text('Profile Page'))
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          showUnselectedLabels: true,
-          unselectedItemColor: Colors.grey,
-          selectedItemColor: Colors.deepPurpleAccent,
-          currentIndex: currentindex,
-          onTap: (int value) {
-            setState(
-              () {
-                currentindex = value;
-              },
-            );
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 6),
-                child: Icon(Icons.grid_view_rounded),
-              ),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 6),
-                child: Icon(Icons.view_timeline_rounded),
-              ),
-              label: 'Bookings',
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 6),
-                child: Icon(Icons.account_balance_wallet_rounded),
-              ),
-              label: 'Wallet',
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 6),
-                child: Icon(Icons.person_rounded),
-              ),
-              label: 'Profile',
-            ),
-          ],
-        ),
-        body: pages[currentindex],
-      ),
-    );
-  }
-}
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -202,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                     child: Stack(
                       children: <Widget>[
                         Row(
-                          children: [
+                          children: <Widget>[
                             Padding(
                               padding: EdgeInsets.only(
                                 left: DEVICE_WIDTH * 0.04,
@@ -324,6 +254,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: EdgeInsets.all(DEVICE_WIDTH * 0.05),
                 child: GridView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: controller.categories.length,
                   shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
@@ -339,6 +270,238 @@ class _HomePageState extends State<HomePage> {
                     );
                   },
                 ),
+              ),
+              const SizedBox(
+                height: 4,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.07),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      'Top Freelancers',
+                      style: TextStyle(
+                        fontSize: DEVICE_WIDTH * 0.06,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      children: const <Widget>[
+                        Text(
+                          'explore',
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Icon(
+                          Icons.keyboard_double_arrow_right_rounded,
+                          color: Colors.grey,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 2,
+              ),
+              SizedBox(
+                width: DEVICE_WIDTH * 0.9,
+                height: 200,
+                child: ListView.builder(
+                  itemCount: controller.topFreelance.length,
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      margin: const EdgeInsets.only(top: 40, right: 10),
+                      height: 100,
+                      width: 160,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[100],
+                        borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                        ),
+                      ),
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: <Widget>[
+                          Positioned(
+                            top: -27,
+                            right: 50,
+                            child: Container(
+                              padding: const EdgeInsets.all(5),
+                              decoration: BoxDecoration(
+                                boxShadow: <BoxShadow>[
+                                  BoxShadow(
+                                    color: Colors.grey[100]!,
+                                  ),
+                                ],
+                                borderRadius: BorderRadius.circular(38),
+                              ),
+                              child: ClipOval(
+                                child: Image.asset(
+                                  controller.topFreelance[index][keyImage],
+                                  width: 63,
+                                  height: 63,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              SizedBox(
+                                height: DEVICE_HEIGHT * 0.06,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    controller.topFreelance[index][keyName],
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: DEVICE_WIDTH * 0.001,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.check_circle_rounded,
+                                    color: Colors.blue,
+                                    size: DEVICE_WIDTH * 0.04,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: DEVICE_HEIGHT * 0.01,
+                              ),
+                              Text(
+                                controller.topFreelance[index][keyCategory],
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  letterSpacing: DEVICE_WIDTH * 0.001,
+                                ),
+                              ),
+                              SizedBox(
+                                height: DEVICE_HEIGHT * 0.01,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                    size: DEVICE_WIDTH * 0.04,
+                                  ),
+                                  SizedBox(
+                                    width: DEVICE_WIDTH * 0.02,
+                                  ),
+                                  Text(
+                                    controller.topFreelance[index][keyRate],
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: DEVICE_HEIGHT * 0.01,
+                              ),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: DEVICE_WIDTH * 0.06,
+                                  vertical: DEVICE_HEIGHT * 0.01,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.deepPurple,
+                                  borderRadius: BorderRadius.circular(
+                                    DEVICE_WIDTH * 0.05,
+                                  ),
+                                ),
+                                child: Text(
+                                  'view profile',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: DEVICE_WIDTH * 0.04,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(
+                height: 6,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.07),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Trending Services',
+                      style: TextStyle(
+                        fontSize: DEVICE_WIDTH * 0.06,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.01,
+              ),
+              SizedBox(
+                width: DEVICE_WIDTH * 0.9,
+                height: DEVICE_HEIGHT * 0.2,
+                child: ListView.builder(
+                  itemCount: controller.services.length,
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      margin: EdgeInsets.all(DEVICE_WIDTH * 0.01),
+                      width: DEVICE_WIDTH * 0.6,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.transparent,
+                            Colors.black.withOpacity(0.3)
+                          ],
+                          begin: Alignment.center,
+                          end: Alignment.bottomCenter,
+                        ),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            controller.services[index][keyImage],
+                          ),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: DEVICE_HEIGHT * 0.16),
+                        child: Text(
+                          controller.services[index][keyService],
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.01,
               ),
             ],
           ),

@@ -1,3 +1,4 @@
+export 'package:seek_me/components/BottomNavigationBar/index.dart';
 export 'package:seek_me/components/elevatedbutton.dart';
 
 export 'OTP/index.dart';

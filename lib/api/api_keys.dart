@@ -9,3 +9,6 @@ const String keyImage = 'image';
 const String keyTitle = 'title';
 const String keyColor = 'color';
 const String keyCategory = 'category';
+const String keyRate = 'rate';
+const String keyName = 'name';
+const String keyService = 'service';

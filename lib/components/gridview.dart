@@ -9,7 +9,7 @@ class GridViewContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [
+        boxShadow: <BoxShadow>[
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 4,

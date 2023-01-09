@@ -1,3 +1,5 @@
+// ignore_for_file: always_specify_types
+
 import '../../general_exports.dart';
 
 class OnBoardingController extends GetxController {

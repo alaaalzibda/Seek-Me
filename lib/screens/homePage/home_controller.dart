@@ -1,6 +1,9 @@
+// ignore_for_file: always_specify_types
+
 import '../../general_exports.dart';
 
 class HomeController extends GetxController {
+  int current = 1;
   List<dynamic> list = <dynamic>[
     {
       keyImage: imageSliderPerson,
@@ -47,7 +50,37 @@ class HomeController extends GetxController {
     },
   ];
 
-  int current = 1;
+  List<dynamic> topFreelance = <dynamic>[
+    {
+      keyName: 'Jack Harlow',
+      keyImage: imageTopFrelanceTwo,
+      keyCategory: 'Electrician',
+      keyRate: '4.5'
+    },
+    {
+      keyName: 'Nina Chen',
+      keyImage: imageTopFrelanceOne,
+      keyCategory: 'Cleaner',
+      keyRate: '4.8'
+    },
+    {
+      keyName: 'Ahmad Khan',
+      keyImage: imageTopFrelanceThree,
+      keyCategory: 'Tailor',
+      keyRate: '4.8'
+    },
+  ];
+
+  List<dynamic> services = <dynamic>[
+    {
+      keyImage: imageServiceOne,
+      keyService: 'Hair services for men',
+    },
+    {
+      keyImage: imageServiceTwo,
+      keyService: 'Electrician services',
+    },
+  ];
 
   void onPageUpdated(int index, dynamic reason) {
     current = index;

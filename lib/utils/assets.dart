@@ -24,6 +24,12 @@ const String imageCategoryThree = '${imagesPath}categoryThree.png';
 const String imageCategoryFour = '${imagesPath}categoryFour.png';
 const String imageCategoryFive = '${imagesPath}categoryFive.png';
 const String imageCategorySix = '${imagesPath}categorySix.png';
+const String imageTopFrelanceOne = '${imagesPath}topfreelane_one.png';
+const String imageTopFrelanceTwo = '${imagesPath}topfreelance_two.png';
+const String imageTopFrelanceThree = '${imagesPath}topfreelance_three.png';
+const String imageCheak = '${imagesPath}check.png';
+const String imageServiceOne = '${imagesPath}serviceOne.png';
+const String imageServiceTwo = '${imagesPath}serviceTwo.png';
 
 // ****** VIDEOS ******
 
