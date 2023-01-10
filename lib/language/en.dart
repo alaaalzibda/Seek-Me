@@ -32,4 +32,5 @@ const Map<String, String> en = <String, String>{
   'bookings': 'Bookings',
   'Wallet': 'Wallet',
   'profile': 'Profile',
+  'choose_location': 'Choose location',
 };

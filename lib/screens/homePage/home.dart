@@ -51,22 +51,42 @@ class _HomePageState extends State<HomePage> {
                                 fontSize: DEVICE_WIDTH * 0.06,
                               ),
                             ),
-                            Row(
-                              children: <Widget>[
-                                const Icon(
-                                  Icons.location_on,
-                                ),
-                                SizedBox(
-                                  width: DEVICE_WIDTH * 0.01,
-                                ),
-                                Text(
-                                  'location'.tr,
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: DEVICE_WIDTH * 0.03,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((BuildContext context) {
+                                      return const Location();
+                                    }),
                                   ),
-                                )
-                              ],
+                                );
+                              },
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(
+                                      builder: (BuildContext context) {
+                                    return const MapSample();
+                                  }));
+                                },
+                                child: Row(
+                                  children: <Widget>[
+                                    const Icon(
+                                      Icons.location_on,
+                                    ),
+                                    SizedBox(
+                                      width: DEVICE_WIDTH * 0.01,
+                                    ),
+                                    Text(
+                                      'location'.tr,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: DEVICE_WIDTH * 0.03,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
                             )
                           ],
                         ),

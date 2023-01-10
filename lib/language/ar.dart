@@ -31,4 +31,5 @@ const Map<String, String> ar = <String, String>{
   'bookings': 'الحجوزات',
   'Wallet': 'محفظة نقود',
   'profile': 'الملف الشخصي',
+  'choose_location': 'اختيار موقع',
 };
