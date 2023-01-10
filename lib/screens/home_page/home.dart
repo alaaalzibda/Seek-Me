@@ -51,22 +51,39 @@ class _HomePageState extends State<HomePage> {
                                 fontSize: DEVICE_WIDTH * 0.06,
                               ),
                             ),
-                            Row(
-                              children: <Widget>[
-                                const Icon(
-                                  Icons.location_on,
-                                ),
-                                SizedBox(
-                                  width: DEVICE_WIDTH * 0.01,
-                                ),
-                                Text(
-                                  'location'.tr,
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: DEVICE_WIDTH * 0.03,
+                            InkWell(
+                              onTap: () {
+                                showModalBottomSheet<void>(
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(50),
+                                      topLeft: Radius.circular(50),
+                                    ),
                                   ),
-                                )
-                              ],
+                                  backgroundColor: Colors.white,
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return const BottomSheetPage();
+                                  },
+                                );
+                              },
+                              child: Row(
+                                children: <Widget>[
+                                  const Icon(
+                                    Icons.location_on,
+                                  ),
+                                  SizedBox(
+                                    width: DEVICE_WIDTH * 0.01,
+                                  ),
+                                  Text(
+                                    controller.location,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: DEVICE_WIDTH * 0.03,
+                                    ),
+                                  )
+                                ],
+                              ),
                             )
                           ],
                         ),
