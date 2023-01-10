@@ -53,39 +53,36 @@ class _HomePageState extends State<HomePage> {
                             ),
                             InkWell(
                               onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: ((BuildContext context) {
-                                      return const Location();
-                                    }),
+                                showModalBottomSheet<void>(
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(50),
+                                      topLeft: Radius.circular(50),
+                                    ),
                                   ),
+                                  backgroundColor: Colors.white,
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return const BottomSheetPage();
+                                  },
                                 );
                               },
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(
-                                      builder: (BuildContext context) {
-                                    return const MapSample();
-                                  }));
-                                },
-                                child: Row(
-                                  children: <Widget>[
-                                    const Icon(
-                                      Icons.location_on,
+                              child: Row(
+                                children: <Widget>[
+                                  const Icon(
+                                    Icons.location_on,
+                                  ),
+                                  SizedBox(
+                                    width: DEVICE_WIDTH * 0.01,
+                                  ),
+                                  Text(
+                                    controller.location,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: DEVICE_WIDTH * 0.03,
                                     ),
-                                    SizedBox(
-                                      width: DEVICE_WIDTH * 0.01,
-                                    ),
-                                    Text(
-                                      'location'.tr,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: DEVICE_WIDTH * 0.03,
-                                      ),
-                                    )
-                                  ],
-                                ),
+                                  )
+                                ],
                               ),
                             )
                           ],
