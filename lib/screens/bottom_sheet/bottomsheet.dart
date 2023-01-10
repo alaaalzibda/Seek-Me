@@ -114,7 +114,7 @@ class BottomSheetPage extends StatelessWidget {
                         height: DEVICE_HEIGHT * 0.02,
                       ),
                       Row(
-                        children: [
+                        children: <Widget>[
                           Text(
                             'Saved_addresses'.tr,
                             style: TextStyle(
