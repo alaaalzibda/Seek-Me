@@ -30,6 +30,10 @@ const String imageTopFrelanceThree = '${imagesPath}topfreelance_three.png';
 const String imageCheak = '${imagesPath}check.png';
 const String imageServiceOne = '${imagesPath}serviceOne.png';
 const String imageServiceTwo = '${imagesPath}serviceTwo.png';
+const String imageSalonOne = '${imagesPath}salonweman_four.png';
+const String imageSalonTwo = '${imagesPath}salonweman_three.png';
+const String imageSalonThree = '${imagesPath}salonweman_two.png';
+const String imageSalonFour = '${imagesPath}salonweman_one.png';
 
 // ****** VIDEOS ******
 

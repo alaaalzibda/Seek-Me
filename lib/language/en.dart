@@ -34,11 +34,16 @@ const Map<String, String> en = <String, String>{
   'choose_location': 'Choose location',
   'Select_location': 'Select a location',
   'Search_for_area': 'Search for area, street name. . .',
-  'Use_current_location': 'Use current location',
+  'use_current_location': 'Use current location',
   'location': 'Ayodhya Nagar Extension, Ayodhya Bypass',
   'Saved_addresses': 'Saved addresses',
   'address':
       '89, Bhel Nagar, Piplani, Ayodhya Bypass, Bhopal, Madhya Pradesh 462022, India ',
   'current_location': '89, Bhel Nagar, Piplani, Ayodhya Nagar Extension',
-  'Ayodhya_Bypass': 'Ayodhya Bypass',
+  'ayodhya_bypass': 'Ayodhya Bypass',
+  'salonfor_women': 'Salon for Women',
+  'facialfor_glow': 'Facial for glow',
+  'manicure': 'Manicure',
+  'pediure': 'Pediure',
+  'threading': 'Threading',
 };

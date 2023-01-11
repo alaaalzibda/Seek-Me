@@ -92,7 +92,7 @@ class Location extends StatelessWidget {
                             width: DEVICE_WIDTH * 0.09,
                           ),
                           Text(
-                            'Ayodhya_Bypass'.tr,
+                            'ayodhya_bypass'.tr,
                             style: const TextStyle(color: Colors.grey),
                           ),
                         ],

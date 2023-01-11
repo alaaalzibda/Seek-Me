@@ -281,9 +281,17 @@ class _HomePageState extends State<HomePage> {
                     crossAxisSpacing: DEVICE_WIDTH * 0.03,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return GridViewContainer(
-                      title: controller.categories[index][keyCategory],
-                      path: controller.categories[index][keyImage],
+                    return GestureDetector(
+                      onTap: () {
+                        //  if (controller.categories[index][keyCategory] ==
+                        // 'Salon for Women') {
+                        Get.toNamed(routeSalon);
+                        //  }
+                      },
+                      child: GridViewContainer(
+                        title: controller.categories[index][keyCategory],
+                        path: controller.categories[index][keyImage],
+                      ),
                     );
                   },
                 ),

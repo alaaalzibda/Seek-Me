@@ -12,3 +12,4 @@ const String keyCategory = 'category';
 const String keyRate = 'rate';
 const String keyName = 'name';
 const String keyService = 'service';
+const String keyPrice = 'price';
