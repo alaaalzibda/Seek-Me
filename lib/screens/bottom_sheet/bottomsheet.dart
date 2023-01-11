@@ -97,7 +97,8 @@ class BottomSheetPage extends StatelessWidget {
                               title: Text(
                                 'Use_current_location'.tr,
                                 style: const TextStyle(
-                                    color: Colors.deepPurpleAccent),
+                                  color: Colors.deepPurpleAccent,
+                                ),
                               ),
                               subtitle: Padding(
                                 padding: EdgeInsets.only(
