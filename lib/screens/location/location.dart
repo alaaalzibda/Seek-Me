@@ -34,79 +34,79 @@ class Location extends StatelessWidget {
                 MapSample(),
               ],
             ),
-            SizedBox(
-              height: DEVICE_HEIGHT * 0.3,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[100]!,
-                boxShadow: const <BoxShadow>[
-                  BoxShadow(
-                    blurRadius: 4,
-                    offset: Offset(1, 1),
-                  ),
-                ],
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(30),
-                ),
-              ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: DEVICE_HEIGHT * 0.03),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    SizedBox(
-                      height: DEVICE_HEIGHT * 0.03,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        const Icon(
-                          Icons.location_on,
-                        ),
-                        SizedBox(
-                          width: DEVICE_WIDTH * 0.03,
-                        ),
-                        Text(
-                          '89, Bhel Nagar, Piplani, Ayodhya Nagar Extension',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: DEVICE_WIDTH * 0.04,
-                            letterSpacing: DEVICE_WIDTH * 0.002,
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      height: DEVICE_HEIGHT * 0.01,
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: DEVICE_WIDTH * 0.09,
-                        ),
-                        const Text(
-                          'Ayodhya Bypass',
-                          style: TextStyle(color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: DEVICE_HEIGHT * 0.07,
-                    ),
-                    ElevatedButtonDiv(
-                      title: 'Confirm location',
-                      color: Colors.deepPurpleAccent,
-                      isButtonEnabled: true,
-                      onPress: () {},
-                    ),
-                    SizedBox(
-                      height: DEVICE_HEIGHT * 0.05,
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            // SizedBox(
+            //   height: DEVICE_HEIGHT * 0.3,
+            // ),
+            // Container(
+            //   decoration: BoxDecoration(
+            //     color: Colors.grey[100]!,
+            //     boxShadow: const <BoxShadow>[
+            //       BoxShadow(
+            //         blurRadius: 4,
+            //         offset: Offset(1, 1),
+            //       ),
+            //     ],
+            //     borderRadius: const BorderRadius.only(
+            //       topLeft: Radius.circular(20),
+            //       topRight: Radius.circular(30),
+            //     ),
+            //   ),
+            //   child: Padding(
+            //     padding: EdgeInsets.symmetric(horizontal: DEVICE_HEIGHT * 0.03),
+            //     child: Column(
+            //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //       children: <Widget>[
+            //         SizedBox(
+            //           height: DEVICE_HEIGHT * 0.03,
+            //         ),
+            //         Row(
+            //           children: <Widget>[
+            //             const Icon(
+            //               Icons.location_on,
+            //             ),
+            //             SizedBox(
+            //               width: DEVICE_WIDTH * 0.03,
+            //             ),
+            //             Text(
+            //               '89, Bhel Nagar, Piplani, Ayodhya Nagar Extension',
+            //               style: TextStyle(
+            //                 color: Colors.black,
+            //                 fontSize: DEVICE_WIDTH * 0.04,
+            //                 letterSpacing: DEVICE_WIDTH * 0.002,
+            //               ),
+            //             )
+            //           ],
+            //         ),
+            //         SizedBox(
+            //           height: DEVICE_HEIGHT * 0.01,
+            //         ),
+            //         Row(
+            //           children: [
+            //             SizedBox(
+            //               width: DEVICE_WIDTH * 0.09,
+            //             ),
+            //             const Text(
+            //               'Ayodhya Bypass',
+            //               style: TextStyle(color: Colors.grey),
+            //             ),
+            //           ],
+            //         ),
+            //         SizedBox(
+            //           height: DEVICE_HEIGHT * 0.07,
+            //         ),
+            //         ElevatedButtonDiv(
+            //           title: 'Confirm location',
+            //           color: Colors.deepPurpleAccent,
+            //           isButtonEnabled: true,
+            //           onPress: () {},
+            //         ),
+            //         SizedBox(
+            //           height: DEVICE_HEIGHT * 0.05,
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
