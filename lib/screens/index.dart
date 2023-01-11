@@ -7,4 +7,5 @@ export 'home_page/index.dart';
 export 'my_app/index.dart';
 export 'on_boarding/index.dart';
 export 'register/index.dart';
+export 'salonfor_weman/index.dart';
 export 'splash/index.dart';
