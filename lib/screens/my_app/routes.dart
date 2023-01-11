@@ -21,4 +21,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeHome,
     page: () => const BottomNavigation(),
   ),
+  GetPage<Location>(
+    name: routeLocation,
+    page: () => const Location(),
+  ),
 ];

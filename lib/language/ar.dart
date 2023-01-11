@@ -30,9 +30,12 @@ const Map<String, String> ar = <String, String>{
   'bookings': 'الحجوزات',
   'Wallet': 'محفظة نقود',
   'profile': 'الملف الشخصي',
+  'choose_location': 'اختيار موقع',
   'Select_location': 'اختر موقعا',
   'Search_for_area': 'ابحث عن المنطقة واسم الشارع. . .',
   'Use_current_location': 'استخدام الموقع الحالي',
   'location': 'امتداد أيوديا ناجار ، أيوديا بايباس',
   'Saved_addresses': 'العناوين المحفوظة',
+  'current_location': '89 ، بهيل ناجار ، بيبلاني ، امتداد أيودهيا ناجار',
+  'Ayodhya_Bypass': 'أيوديا بايباس',
 };
