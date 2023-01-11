@@ -283,10 +283,10 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
                       onTap: () {
-                        if (controller.categories[index][keyCategory] ==
-                            'Salon for Women') {
-                          Get.toNamed(routeSalon);
-                        }
+                        //  if (controller.categories[index][keyCategory] ==
+                        // 'Salon for Women') {
+                        Get.toNamed(routeSalon);
+                        //  }
                       },
                       child: GridViewContainer(
                         title: controller.categories[index][keyCategory],
