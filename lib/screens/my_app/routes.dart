@@ -25,4 +25,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeSalon,
     page: () => const SalonForWeman(),
   ),
+  GetPage<Location>(
+    name: routeLocation,
+    page: () => const Location(),
+  ),
 ];
