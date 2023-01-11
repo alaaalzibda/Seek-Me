@@ -38,5 +38,7 @@ const Map<String, String> en = <String, String>{
   'location': 'Ayodhya Nagar Extension, Ayodhya Bypass',
   'Saved_addresses': 'Saved addresses',
   'address':
-      '89, Bhel Nagar, Piplani, Ayodhya Bypass, Bhopal, Madhya Pradesh 462022, India '
+      '89, Bhel Nagar, Piplani, Ayodhya Bypass, Bhopal, Madhya Pradesh 462022, India ',
+  'current_location': '89, Bhel Nagar, Piplani, Ayodhya Nagar Extension',
+  'Ayodhya_Bypass': 'Ayodhya Bypass',
 };

@@ -36,4 +36,6 @@ const Map<String, String> ar = <String, String>{
   'Use_current_location': 'استخدام الموقع الحالي',
   'location': 'امتداد أيوديا ناجار ، أيوديا بايباس',
   'Saved_addresses': 'العناوين المحفوظة',
+  'current_location': '89 ، بهيل ناجار ، بيبلاني ، امتداد أيودهيا ناجار',
+  'Ayodhya_Bypass': 'أيوديا بايباس',
 };
